@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+  <link rel="icon" href="assets/images/foyezimg-removebg-previewBW.png" type="image/x-icon">
+
+  <title>Contact</title>  
+
+  <link href="./main.3f6952e4.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+
+<header>
+  <nav class="navbar navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./works.html" title="">02 : Projects</a></li>
+          <li><a href="./about.html" title="">03 : About me</a></li>
+          <li><a href="./contact.html" title="">04 : Contact</a></li>
+          <!-- <li><a href="./components.html" title="">05 : Components</a></li> -->
+        </ul>
+
+      </div> 
+    </div>
+  </nav>
+</header>
+
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="section-container-spacer text-center">
+          <h1 class="h2">04 : Contact me</h1>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+             <form id="contact-form" class="reveal-content">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="form-group">
+                      <input type="email" name="from_email" class="form-control" id="email" placeholder="Enter Your Email" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="from_name" class="form-control" id="subject" placeholder="Enter Your name" required>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" name="message" id="message" rows="5" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default btn-lg">Send</button>
+                  </div>
+                  <div class="col-md-5 address-container">
+                    <ul class="list-unstyled">
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fa fa-phone" aria-hidden="true"></i>
+                        </span>
+                        + 880 1863703256
+                      </li>
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fa fa-at" aria-hidden="true"></i>
+                        </span>
+                        ehasan201302@bscse.uiu.ac.bd
+                      </li>
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fa fa-at" aria-hidden="true"></i>
+                        </span>
+                        emamhasan9203@gmail.com
+                      </li>
+                    </ul>
+                    <h3>Follow me on social networks</h3>
+                    <a href="https://web.facebook.com/profile.php?id=61555764154201" title="" class="fa-icon">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://github.com/foyez-hub" title="" class="fa-icon">
+                      <i class="fa fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/emam-hasan302" title="" class="fa-icon">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© Emam Hasan </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); 
+
+      emailjs.sendForm('service_mo8izau', 'template_v9bt93o', this)
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Your message has been sent successfully.');
+          form.reset(); 
+        }, function (error) {
+          console.log('FAILED...', error);
+          alert('There was an error sending your message. Please try again later.');
+        });
+    });
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init('oa5eZSamW_XlSEQJJ'); 
+</script>
+
+<script type="text/javascript" src="./main.70a66962.js"></script>
+</body>
+</html>
